@@ -1,0 +1,8 @@
+.input-wrapper {
+  margin: auto;
+}
+input {
+  width: 90%;
+  max-width: 700px;
+  min-width: 300px;
+}

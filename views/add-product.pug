@@ -1,0 +1,12 @@
+extends template/template.pug
+
+block styles
+    link(rel="stylesheet", href="/css/form.css")
+
+block content
+    form(action=`${path}`, method="post")
+        .row.input-wrapper
+            .input-field.col.s12
+                i(class="material-icons prefix" for="book") border_color
+                input(type="text", name="title" placeholder="Book:" id="book" autocomplete="off" class="validate")
+        button(type="submit" class="waves-effect waves-light btn z-depth-2") SUBMIT

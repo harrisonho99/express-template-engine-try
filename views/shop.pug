@@ -1,0 +1,19 @@
+extends template/template.pug
+
+block content 
+    h2 My Products
+        .container
+            .row
+                each book in products 
+                    .col.s12.m12.l6
+                        .card
+                            .card-image
+                                img(src="https://salt.tikicdn.com/cache/w444/ts/product/f8/34/c8/5fbf2a6f9d07b76d98e2fff2b29b0d3c.jpg", alt=`${book.title}`)
+                                span.product-title #{book.title}
+                                a.btn-floating.halfway-fab.waves-effect.waves-light.red
+                                    i.material-icons add
+                            .card-content
+                                p I'm a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.
+
+
+

@@ -6,8 +6,8 @@ block content
             .container
                 .row
                     each book in products 
-                        .col.s12.m12.l6
-                            .card
+                        .col.s10.m6.l4.card-wrapper
+                            .card.set-card
                                 .card-image
                                     img(src="https://salt.tikicdn.com/cache/w444/ts/product/f8/34/c8/5fbf2a6f9d07b76d98e2fff2b29b0d3c.jpg", alt=`${book.title}`)
                                     span.product-title #{book.title}

@@ -11,7 +11,7 @@ nav {
 }
 p {
   font-size: 1.2rem;
-  line-height: 140%;
+  line-height: 130%;
 }
 ul {
   width: 100%;
@@ -41,12 +41,32 @@ main {
 }
 .card-image > img {
   margin: auto;
-  width: 300px !important;
-  height: 300px !important;
+  width: 200px !important;
+  height: auto !important;
 }
 .product-title {
   font-size: 2rem;
 }
 .nav-link {
   font-size: 1.2rem;
+}
+.set-card {
+  min-width: 220px !important;
+}
+.row {
+  display: flex !important;
+  /* flex-direction: column; */
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  justify-content: flex-start !important;
+}
+.col.s10.m6.l4.card-wrapper {
+  margin: 0;
+}
+
+/* responsive  */
+@media only screen and (max-width: 600px) {
+  .col.s10.m6.l4.card-wrapper {
+    margin: auto;
+  }
 }

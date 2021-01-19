@@ -14,8 +14,11 @@ const getProductFromFs = (cb) => {
 };
 
 module.exports = class Product {
-  constructor(t) {
-    this.title = t;
+  constructor(title, price, imgURL, desc) {
+    this.title = title;
+    this.price = price;
+    this.imgURL = imgURL;
+    this.desc = desc;
   }
 
   save() {

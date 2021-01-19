@@ -4,7 +4,7 @@ exports.getShop = (_, res) => {
   let products;
   Product.fetchAll((data) => {
     products = data;
-    res.render('shop', {
+    res.render('public/shop', {
       products,
       pageTitle: 'Shop Page',
       hasProduct: products.length > 0,
@@ -12,17 +12,17 @@ exports.getShop = (_, res) => {
   });
 };
 exports.getCard = (_, res) => {
-  res.render('cart', {
+  res.render('public/cart', {
     pageTitle: 'Cart',
   });
 };
 exports.getProfile = (_, res) => {
-  res.render('profile', {
+  res.render('public/profile', {
     pageTitle: 'Profile',
   });
 };
 exports.getCheckout = (_, res) => {
-  res.render('checkout', {
+  res.render('public/checkout', {
     pageTitle: 'Check Out',
   });
 };

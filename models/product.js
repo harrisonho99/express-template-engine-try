@@ -22,7 +22,7 @@ module.exports = class Product {
     getProductFromFs((data) => {
       data.push(this);
       fs.writeFile(p, JSON.stringify(data), (err) => {
-        console.log(err, '---error');
+        if (err) console.log(err, '---error');
       });
     });
   }

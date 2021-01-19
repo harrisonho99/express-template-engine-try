@@ -23,3 +23,18 @@ exports.getShop = (_, res) => {
     });
   });
 };
+exports.getCard = (_, res) => {
+  res.render('cart', {
+    pageTitle: 'Cart',
+  });
+};
+exports.getProfile = (_, res) => {
+  res.render('profile', {
+    pageTitle: 'Profile',
+  });
+};
+exports.getCheckout = (_, res) => {
+  res.render('checkout', {
+    pageTitle: 'Check Out',
+  });
+};

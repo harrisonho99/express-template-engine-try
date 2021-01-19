@@ -3,10 +3,14 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const morgan = require('morgan');
 const fs = require('fs');
-//Dir local
-const adminRoutes = require('./routes/admin.js');
+//Routes import
+const adminRoute = require('./routes/admin.js');
 const shopRoute = require('./routes/shop.js');
 const errorController = require('./controllers/errors');
+const cartRoute = require('./routes/cart');
+const checkoutRoute = require('./routes/checkout');
+const profileRoute = require('./routes/profile');
+//init app
 const app = express();
 
 //set pub template engine
@@ -23,8 +27,11 @@ app.use(morgan('combined', { stream: accessLogStream }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 //routes
+app.use(checkoutRoute);
+app.use(profileRoute);
 app.use(shopRoute);
-app.use('/admin', adminRoutes.router);
+app.use(cartRoute);
+app.use('/admin', adminRoute.router);
 app.use('*', errorController.get404);
-//init
+//open port
 app.listen(3000);

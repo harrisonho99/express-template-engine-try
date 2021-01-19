@@ -6,7 +6,19 @@ block styles
 block content
     form(action=`${path}`, method="post")
         .row.input-wrapper
-            .input-field.col.s12
-                i(class="material-icons prefix" for="book") border_color
-                input(type="text", name="title" placeholder="Book:" id="book" autocomplete="off" class="validate")
-        button(type="submit" class="waves-effect waves-light btn z-depth-2") SUBMIT
+            .input-field.col.s10
+                i(class="material-icons prefix input-icon" for="book") border_color
+                input(type="text", name="title" placeholder="Book Name:" id="book" autocomplete="off" class="validate" required)
+        .row.input-wrapper
+            .input-field.col.s10
+                i(class="material-icons prefix input-icon" for="price") border_color
+                input(type="number", name="price" placeholder="Price: (0.00)" id="price" autocomplete="off" class="validate" step="0.01" required )
+        .row.input-wrapper
+            .input-field.col.s10
+                i(class="material-icons prefix input-icon" for="imageUrl") border_color
+                input(type="url", name="imageUrl" placeholder="Image URL:" id="imageUrl" autocomplete="off" class="validate")
+        .row.input-wrapper
+            .input-field.col.s10
+                i(class="material-icons prefix input-icon" for="book") border_color
+                textarea(name="description", rows="5" placeholder="Description:" class="validate" required)
+        button(type="submit" class="waves-effect waves-light btn z-depth-2 submit-btn") SUBMIT

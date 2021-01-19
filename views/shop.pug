@@ -3,18 +3,18 @@ extends template/template.pug
 block content 
     if hasProduct
         h3 My Products
-            .container
-                .row
-                    each book in products 
-                        .col.s10.m6.l4.card-wrapper
-                            .card.set-card
-                                .card-image
-                                    img(src="https://salt.tikicdn.com/cache/w444/ts/product/f8/34/c8/5fbf2a6f9d07b76d98e2fff2b29b0d3c.jpg", alt=`${book.title}`)
-                                    span.product-title #{book.title}
-                                    a.btn-floating.halfway-fab.waves-effect.waves-light.red
-                                        i.material-icons add
-                                .card-content
-                                    p I'm a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.
+        .container
+            .row.row-product
+                each book in products 
+                    .col.s10.m6.l4.card-wrapper
+                        .card.set-card
+                            .card-image
+                                img(src="https://salt.tikicdn.com/cache/w444/ts/product/f8/34/c8/5fbf2a6f9d07b76d98e2fff2b29b0d3c.jpg", alt=`${book.title}`)
+                                span.product-title #{book.title}
+                                button.btn-floating.halfway-fab.waves-effect.waves-light.white
+                                    i.material-icons#love-border favorite_border
+                            .card-content
+                                p I'm a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.
     else
         h3 Has No Product! 
 

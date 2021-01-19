@@ -1,4 +1,6 @@
 extends template/template.pug
-
+block styles
+    link(rel="stylesheet", href="/css/notfound.css")
 block content 
-    h1 NOT FOUND!
+    .not-found-wrapper
+        h2.not-found NOT FOUND!

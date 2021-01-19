@@ -13,10 +13,16 @@ html(lang="en")
         header
             nav.z-depth-3
                 div.nav-wrapper
-                    ul
-                        li
+                    ul.menu-wrapper
+                        li.menu.link-main
                             a(href="/" class="nav-link") Shop
-                        li
+                        li.menu
                             a(href="/admin/add-product" class="nav-link") Add Product
+                        li.menu
+                            a(href="/cart" class="nav-link") Cart
+                        li.menu
+                            a(href="/checkout" class="nav-link") Check Out
+                        li.menu
+                            a(href="/profile" class="nav-link") Profile
         main
             block content

@@ -1,0 +1,11 @@
+main {
+  padding: 0;
+}
+.not-found-wrapper {
+  height: 100vh;
+  display: flex;
+}
+.not-found {
+  color: rgb(255, 83, 83);
+  margin: auto;
+}

@@ -4,6 +4,7 @@ const path = require('path');
 const morgan = require('morgan');
 const fs = require('fs');
 //Routes import
+/*
 const adminRoute = require('./routes/admin.js');
 const shopRoute = require('./routes/shop.js');
 const errorController = require('./controllers/errors');
@@ -33,5 +34,7 @@ app.use(shopRoute);
 app.use(cartRoute);
 app.use('/admin', adminRoute.router);
 app.use('*', errorController.get404);
+*/
+app.use((_,res)=> {res.send('hello 🌎')})
 //open port
 app.listen(3000);
